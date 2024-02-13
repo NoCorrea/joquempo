@@ -16,9 +16,9 @@
         <h1 class="winner-title">Jogador 1 ganhou</h1>
         <div class="scoreboard">
            <span class="player-name">jogador 1</span> 
-           <span class="score">01</span>
+           <span class="score" id="score-1">00</span>
            <span class="score-separator">vs</span>
-           <span class="score">01</span>
+           <span class="score" id="score-2">00</span>
            <span class="player-name">jogador 2</span>
         </div>
     </header>
@@ -26,7 +26,7 @@
         <div class="button-move-wraper">
             <button class="button-move button-move-stone-1">Pedra</button>
             <button class="button-move button-move-paper-1">Papel</button>
-            <button class="button-move button button-move-scissors-1">Tesoura</button>
+            <button class="button-move button-move-scissors-1">Tesoura</button>
         </div>
         <div class="board">
             <div class="move-box" id="move-box-1"></div>
@@ -41,8 +41,8 @@
     </main>
 
     <footer class="config-box">
-        <button class="button-move">Iniciar</button>
-        <button class="button-move">Resetar</button>
+        <button type="submit" class="button-move">Iniciar</button>
+        <button type="reset" class="button-move" id="reset-button">Resetar</button>
     </footer>
     <script src="index.js">
     </script>
