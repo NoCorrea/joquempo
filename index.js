@@ -15,7 +15,9 @@ const $scorePlayer1=document.querySelector('#score-1')
 const $scorePlayer2=document.querySelector('#score-2')
 const $winnerTitle=document.querySelector('.winner-title')
 
-const $ResetButton=document.querySelector('#reset-button')
+const $resetButton=document.querySelector('#reset-button')
+
+const $buttonStart=document.querySelector('.button-start')
 
 
 let movePlayer1 = ''
@@ -23,6 +25,7 @@ let movePlayer2  = ''
 let winner = 0
 let Player1Score = 0
 let Player2Score = 0
+let GameStart = false
 
 function setWinner () {
    if (movePlayer1 == '' || movePlayer2 == '')
@@ -85,7 +88,8 @@ function resetMoveVariables (){
 }
 
 
-function handleStone1Move () { 
+function handleStone1Move () {
+   if (GameStart == false) return 
    $moveBox1.innerHTML='<img src="image/stone.png" alt="imagem mãobranca  desenhada com traços em preto" title="imagem mão brancarepresentando    pedra do joquempo">' 
    movePlayer1 = 'stone' 
    setWinner()
@@ -100,6 +104,7 @@ function handleStone1Move () {
    }
    
 function handlePaper1Move () {
+   if (GameStart == false) return
       $moveBox1.innerHTML='<img src="image/paper.png" alt="imagem mão branca desenhada com traços em preto" title="imagem mão branca representando papel do joquempo">'
       movePlayer1 = 'paper'
       setWinner()
@@ -114,6 +119,7 @@ function handlePaper1Move () {
       }
       
 function handleScissors1Move() {
+   if (GameStart == false) return
    $moveBox1.innerHTML='<img src="image/scissors.png" alt="imagem mão brancdesenhada com traços em preto" title="imagem mão branca representandtesoura do joquempo">'
    movePlayer1 = 'scissors'
    setWinner()
@@ -128,6 +134,7 @@ function handleScissors1Move() {
    }
               
 function handleStone2Move () {
+   if (GameStart == false) return
    $moveBox2.innerHTML='<img src="image/stone.png" alt="imagem mão brandesenhada com traços em preto" title="imagem mão branca representanpedra do joquempo">'
    movePlayer2 = 'stone'
    setWinner()
@@ -142,6 +149,7 @@ function handleStone2Move () {
    }
             
 function handlePaper2Move () {
+   if (GameStart == false) return
    $moveBox2.innerHTML='<img src="image/paper.png" alt="imagem branca desenhada com traços em preto" title="imagem mão brarepresentando papel do joquempo">'
    movePlayer2 = 'paper'
    setWinner()
@@ -157,6 +165,7 @@ function handlePaper2Move () {
 }
 
 function handleScissors2Move() {
+   if (GameStart == false) return
    $moveBox2.innerHTML='<img src="image/scissors.png" alt="imagem branca  desenhada com traços em preto" title="imagem mão brarepresentando  tesoura do joquempo">'
    movePlayer2 = 'scissors'
    setWinner()
@@ -170,14 +179,24 @@ function handleScissors2Move() {
   
    }
 
+
+/* handleResetMove=resetAll*/
    function handleResetMove (){
       $winnerTitle.innerHTML='Click no Botão Iniciar para realizar outra partida!'
       resetBattleField()
       resetMoveVariables
-      Player1Score = 0;
-      Player2Score = 0;
+      Player1Score = 0
+      Player2Score = 0
       printWinnerScore()
+      
+      
    
+
+   }
+
+   function handleStartGame () {
+   $buttonStart.textContent='Parar'
+   GameStart = true
 
    }
    
@@ -187,7 +206,8 @@ function handleScissors2Move() {
    $buttonStonePlayer2.addEventListener("click", handleStone2Move  );
    $buttonPaperPlayer2.addEventListener("click", handlePaper2Move);
    $buttonScissorsPlayer2.addEventListener("click", handleScissors2Move);
-   $ResetButton.addEventListener("click", handleResetMove);
+   $resetButton.addEventListener("click", handleResetMove);
+   $buttonStart.addEventListener("click", handleStartGame);
 
 
 
