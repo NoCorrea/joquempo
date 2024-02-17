@@ -158,6 +158,16 @@ body {
 
 /*@media screen end (max-width: 720px)*/
 
+.started {
+    background-color: red;
+    color: white;
+    border: 1px solid red;
+    
+}
+.started:hover {
+    color: red;
+}
+
 @media screen and (max-width: 720px) {
 
 .player-name {

@@ -194,9 +194,21 @@ function handleScissors2Move() {
 
    }
 
-   function handleStartGame () {
-   $buttonStart.textContent='Parar'
-   GameStart = true
+
+
+   function handleToggletGame () {
+      /*executa quando quer parar o jogo*/
+      if(GameStart == true) {
+         GameStart =  false
+         $buttonStart.textContent='Iniciar'
+         $buttonStart.classList.remove ('started')
+         
+      } else {
+         /*executa quando quer começar o jogo*/
+         GameStart = true
+         $buttonStart.classList.add ('started')
+         $buttonStart.textContent='Parar'
+   }
 
    }
    
@@ -207,7 +219,7 @@ function handleScissors2Move() {
    $buttonPaperPlayer2.addEventListener("click", handlePaper2Move);
    $buttonScissorsPlayer2.addEventListener("click", handleScissors2Move);
    $resetButton.addEventListener("click", handleResetMove);
-   $buttonStart.addEventListener("click", handleStartGame);
+   $buttonStart.addEventListener("click", handleToggletGame);
 
 
 
