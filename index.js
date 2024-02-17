@@ -90,7 +90,7 @@ function resetMoveVariables (){
 
 function handleStone1Move () {
    if (GameStart == false) return 
-   $moveBox1.innerHTML='<img src="image/stone.png" alt="imagem mãobranca  desenhada com traços em preto" title="imagem mão brancarepresentando    pedra do joquempo">' 
+   $moveBox1.innerHTML='<img src="image/stone.png" alt="imagem mão branca  desenhada com traços em preto" title="imagem mão branca representando pedra do joquempo">' 
    movePlayer1 = 'stone' 
    setWinner()
    addWinnerScore ()
@@ -120,7 +120,7 @@ function handlePaper1Move () {
       
 function handleScissors1Move() {
    if (GameStart == false) return
-   $moveBox1.innerHTML='<img src="image/scissors.png" alt="imagem mão brancdesenhada com traços em preto" title="imagem mão branca representandtesoura do joquempo">'
+   $moveBox1.innerHTML='<img src="image/scissors.png" alt="imagem mão branca desenhada com traços em preto" title="imagem mão branca representando tesoura do joquempo">'
    movePlayer1 = 'scissors'
    setWinner()
    addWinnerScore ()
@@ -135,7 +135,7 @@ function handleScissors1Move() {
               
 function handleStone2Move () {
    if (GameStart == false) return
-   $moveBox2.innerHTML='<img src="image/stone.png" alt="imagem mão brandesenhada com traços em preto" title="imagem mão branca representanpedra do joquempo">'
+   $moveBox2.innerHTML='<img src="image/stone.png" alt="imagem mão branca desenhada com traços em preto" title="imagem mão branca representando pedra do joquempo">'
    movePlayer2 = 'stone'
    setWinner()
    addWinnerScore ()
@@ -150,7 +150,7 @@ function handleStone2Move () {
             
 function handlePaper2Move () {
    if (GameStart == false) return
-   $moveBox2.innerHTML='<img src="image/paper.png" alt="imagem branca desenhada com traços em preto" title="imagem mão brarepresentando papel do joquempo">'
+   $moveBox2.innerHTML='<img src="image/paper.png" alt="imagem branca desenhada com traços em preto" title="imagem mão branca representando papel do joquempo">'
    movePlayer2 = 'paper'
    setWinner()
    addWinnerScore ()
@@ -166,7 +166,7 @@ function handlePaper2Move () {
 
 function handleScissors2Move() {
    if (GameStart == false) return
-   $moveBox2.innerHTML='<img src="image/scissors.png" alt="imagem branca  desenhada com traços em preto" title="imagem mão brarepresentando  tesoura do joquempo">'
+   $moveBox2.innerHTML='<img src="image/scissors.png" alt="imagem branca  desenhada com traços em preto" title="imagem mão branca representando  tesoura do joquempo">'
    movePlayer2 = 'scissors'
    setWinner()
    addWinnerScore ()
